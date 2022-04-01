@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Animals</title>
+        <link href="style.css" type="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Animal Lovers</h1>
+        </header>
+        <section class="form-section">
+            <form id="add-form" class="form">
+                <input id="name"  type="text" placeholder="enter name" />
+                <input id="breed"  type="text" placeholder="enter breed" />
+                <label for="color">
+                    Choose color
+                    <input id="color" type="color" placeholder="enter color" />
+                </label>
+                <input id="age"  type="number" placeholder="enter age" />
+
+                <lable for="parent">Parent name
+                    <input id="parent" type="text">
+                </lable>
+                <button type="submit" onclick="handleSubmit(event)"> Add Animal</button>
+
+
+
+            </form>
+
+        </section>
+
+
+        <script src="main.js"></script>
+    </body>
+</html>
