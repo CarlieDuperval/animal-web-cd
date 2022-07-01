@@ -59,3 +59,28 @@ async function handleSubmit(event){
         
     }
 }
+
+
+// to load the animal list
+async function onload(){
+    try {
+        const data = await fetch("http://localhost:5600/animals")
+        const animals = await data.json() // this is an array
+        
+
+        const animalListElement = document.getElementById('animal-List')
+
+        animals.forEach(animal => {
+            const li = document.createElement("li")
+            const animalNameElement = document.createTextNode(`This animal name is ${animal.name}`)
+            li.appendChild(animalNameElement)
+            animalListElement.appendChild(li)
+
+            
+        });
+
+    } catch (error) {
+        console.error(error)
+    }
+
+}
